@@ -1,0 +1,61 @@
+.hover-slider-nav {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, .4);
+
+  &__item {
+    padding: 2vh;
+    font-size: 8vh;
+    font-weight: 700;
+    color: rgba(255,255,255, .4);
+    cursor: pointer;
+    transition: .2s;
+    &--active {
+      color: rgba(255,255,255, .8);;
+    }
+  }
+}
+
+.hover-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  background-color: #000;
+
+  &__item {
+    position: absolute;
+    top: -2vh;
+    left: -2vw;
+    width: 104vw;
+    height: 104vh;
+    opacity: 0;
+    transition: .5s linear;
+    transform: translateY(-2vh);
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
